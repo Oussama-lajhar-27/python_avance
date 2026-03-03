@@ -1,0 +1,12 @@
+<div style="padding: 20px; font-family: sans-serif;">
+  <h1>liste des accessoires</h1>
+
+  <div *ngFor="let item of accessoires" style="border: 1px solid #ccc; margin-bottom: 10px; padding: 10px; border-radius: 8px;">
+    <h3 style="margin: 0;">{{ item.nom }}</h3>
+    <p style="margin: 5px 0;">marque: <b>{{ item.marque }}</b></p>
+    <p style="margin: 5px 0;">prix: {{ item.prix }} dt</p>
+    <span [style.color]="item.disponible ? 'green' : 'red'">
+      {{ item.disponible ? 'disponible' : 'hors stock' }}
+    </span>
+  </div>
+</div>
